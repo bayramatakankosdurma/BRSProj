@@ -1,0 +1,39 @@
+<div class="mat-elevation-z8">
+  <table mat-table matSort [dataSource]="dataSource">
+    <!-- Position Column -->
+    <ng-container matColumnDef="needyPerson">
+      <th mat-header-cell *matHeaderCellDef>Needy Person</th>
+      <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+    </ng-container>
+    <ng-container matColumnDef="needId">
+      <th mat-header-cell *matHeaderCellDef>Need Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="isMatched">
+      <th mat-header-cell *matHeaderCellDef>Match Option</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          *ngIf="!element.isMatched"
+          style="margin-top: 10px; margin-left: 10px"
+          mat-raised-button
+          color="primary"
+          (click)="matchUser(element.username, element.id, element.need)"
+        >
+          Match
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 20]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  >
+  </mat-paginator>
+</div>

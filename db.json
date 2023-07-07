@@ -1,0 +1,81 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "admin",
+      "password": "123456Bak",
+      "email": "admin@user.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "test2",
+      "name": "test2",
+      "password": "123456Bak",
+      "email": "test2@test2.com",
+      "gender": "male",
+      "role": "yardimci",
+      "isActive": true
+    },
+    {
+      "id": "test3",
+      "name": "test3",
+      "password": "123456Bak",
+      "email": "test3@test3.com",
+      "gender": "male",
+      "role": "ihtiyac",
+      "isActive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "yardimci",
+      "name": "Yardimci"
+    },
+    {
+      "code": "ihtiyac",
+      "name": "Ihtiyac"
+    }
+  ],
+  "needUser": [
+    {
+      "username": "test3",
+      "id": "1",
+      "need": "food",
+      "isMatched": true
+    }
+  ],
+  "provideUser": [
+    {
+      "username": "test2",
+      "id": "1",
+      "provide": "food",
+      "isMatched": true
+    }
+  ],
+  "homeNeed": [],
+  "foodNeed": [
+    {
+      "username": "test3",
+      "id": "1",
+      "people": "1-3",
+      "time": "5+",
+      "eatAnything": true,
+      "isMatched": true
+    }
+  ],
+  "moneyNeed": [],
+  "homeProvide": [],
+  "foodProvide": [
+    {
+      "username": "test3",
+      "id": "1",
+      "people": "10+",
+      "time": "3-5",
+      "eatAnything": true,
+      "isMatched": true
+    }
+  ],
+  "moneyProvide": []
+}

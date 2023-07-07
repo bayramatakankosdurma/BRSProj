@@ -1,0 +1,187 @@
+<mat-card *ngIf="selectionHome">
+  <mat-card-header style="align-self: center">
+    <h1>Submit Need</h1>
+  </mat-card-header>
+  <mat-card-content style="align-self: center">
+    <form
+      class="example-form"
+      [formGroup]="homeForm"
+      (ngSubmit)="PostHomeNeed()"
+    >
+      <div>
+        <div formGroupName="homeForm1">
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput formControlName="id" />
+          </mat-form-field>
+        </div>
+
+        <br />
+        <div formGroupName="homeForm2">
+          <mat-form-field>
+            <mat-label>For how many people?</mat-label>
+            <mat-select formControlName="people">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let people of homePeople" [value]="people">
+                {{ people }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>For how many weeks?</mat-label>
+            <mat-select formControlName="time">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let week of homeWeeks" [value]="week">
+                {{ week }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <div>
+            <mat-checkbox class="example-margin" formControlName="otherPeople"
+              >Can you live with anyone? If yes check the box.</mat-checkbox
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <div style="margin-top: 10px">
+        <button mat-raised-button color="primary">Update</button>
+        <a
+          style="margin-left: 10px"
+          mat-dialog-close
+          mat-raised-button
+          color="accent"
+          >Close</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="selectionFood">
+  <mat-card-header style="align-self: center">
+    <h1>Submit Need</h1>
+  </mat-card-header>
+  <mat-card-content style="align-self: center">
+    <form
+      class="example-form"
+      [formGroup]="foodForm"
+      (ngSubmit)="PostFoodNeed()"
+    >
+      <div>
+        <div formGroupName="foodForm1">
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput formControlName="id" />
+          </mat-form-field>
+        </div>
+
+        <br />
+        <div formGroupName="foodForm2">
+          <mat-form-field>
+            <mat-label>For how many people?</mat-label>
+            <mat-select formControlName="people">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let people of homePeople" [value]="people">
+                {{ people }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>For how many weeks?</mat-label>
+            <mat-select formControlName="time">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let week of homeWeeks" [value]="week">
+                {{ week }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <div>
+            <mat-checkbox class="example-margin" formControlName="eatAnything"
+              >Can you eat anything? If yes check the box.</mat-checkbox
+            >
+          </div>
+        </div>
+      </div>
+      <br />
+      <div style="margin-top: 10px">
+        <button mat-raised-button color="primary">Update</button>
+        <a
+          style="margin-left: 10px"
+          mat-dialog-close
+          mat-raised-button
+          color="accent"
+          >Close</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
+<mat-card *ngIf="selectionMoney">
+  <mat-card-header style="align-self: center">
+    <h1>Submit Need</h1>
+  </mat-card-header>
+  <mat-card-content style="align-self: center">
+    <form
+      class="example-form"
+      [formGroup]="moneyForm"
+      (ngSubmit)="PostMoneyNeed()"
+    >
+      <div>
+        <div formGroupName="moneyForm1">
+          <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput formControlName="id" />
+          </mat-form-field>
+        </div>
+
+        <br />
+        <div formGroupName="moneyForm2">
+          <mat-form-field>
+            <mat-label>For how many people?</mat-label>
+            <mat-select formControlName="people">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let people of moneyPeople" [value]="people">
+                {{ people }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>For how many weeks?</mat-label>
+            <mat-select formControlName="time">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let week of moneyWeeks" [value]="week">
+                {{ week }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br />
+          <mat-form-field>
+            <mat-label>How much money?</mat-label>
+            <mat-select formControlName="quantity">
+              <mat-option value=""> Select Need </mat-option>
+              <mat-option *ngFor="let money of moneyQuantity" [value]="money">
+                {{ money }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <br />
+      <div style="margin-top: 10px">
+        <button mat-raised-button color="primary">Update</button>
+        <a
+          style="margin-left: 10px"
+          mat-dialog-close
+          mat-raised-button
+          color="accent"
+          >Close</a
+        >
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
